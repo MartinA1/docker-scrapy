@@ -1,0 +1,11 @@
+scrapy:
+  image: registry.fenomen.ee/scrapy:0.0.1
+  hostname: scrapy
+  volumes-from: scrapy-data
+
+scrapy-data:
+  image: registry.fenomen.ee/scrapy:0.0.1
+  hostname: scrapy-data
+  entrypoint: ["/bin/echo", "Data-only container for scrapy"]
+  volumes:
+    - ./projects: /scrapy/projects

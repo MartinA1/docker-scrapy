@@ -8,3 +8,5 @@ RUN sudo apt-get -y install python-dev python-pip libxml2-dev libxslt1-dev zlib1
 RUN pip install Scrapy
 
 VOLUME ["/scrapy/projects"]
+
+ENTRYPOINT ["/usr/local/bin/scrapy"]
